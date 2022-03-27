@@ -1,15 +1,12 @@
 from typing import Optional
-
 from fastapi import FastAPI
+from sheets import get_form_response
 
 app = FastAPI()
 
+@app.get("/get_response/{number}")
+async def get_form_data(number):
+    return get_form_response(number)
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
 
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+# uvicorn main:app --reload

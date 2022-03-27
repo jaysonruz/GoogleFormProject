@@ -6,3 +6,9 @@ pip install pipreqs
 pipreqs ./
 
 https://www.techwithtim.net/tutorials/google-sheets-python-api-tutorial/
+
+
+
+fail checks--
+
+> can there be two phone numbers ? 
